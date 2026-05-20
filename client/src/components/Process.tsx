@@ -3,7 +3,7 @@ import { content } from "@/content";
 export default function Process() {
   return (
     <section
-      className="relative py-20 px-12 overflow-hidden"
+      className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 overflow-hidden"
       style={{ backgroundColor: "#F0EFEB" }}
       id="process"
     >
@@ -17,13 +17,13 @@ export default function Process() {
 
       <div className="container mx-auto max-w-6xl">
         {/* Top Info */}
-        <div className="flex justify-between items-center mb-12 text-xs font-inter">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 sm:mb-12 text-xs font-inter">
           <div style={{ color: "#6B6A66" }}>
             <p>{content.process.instagram}</p>
             <p>{content.process.behance}</p>
           </div>
           <div
-            className="px-3 py-1.5 rounded-full"
+            className="px-3 py-1.5 rounded-full whitespace-nowrap"
             style={{
               backgroundColor: "#E8EDE4",
               color: "#3D6B2E",
@@ -34,10 +34,10 @@ export default function Process() {
         </div>
 
         {/* Section Title */}
-        <h2 className="sub-head mb-12 animate-slideUp">{content.process.title}</h2>
+        <h2 className="sub-head mb-8 sm:mb-12 animate-slideUp">{content.process.title}</h2>
 
         {/* Process Cards Grid */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {content.process.cards.map((card, idx) => (
             <div
               key={idx}

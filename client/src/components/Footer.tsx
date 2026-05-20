@@ -4,7 +4,7 @@ import { content } from "@/content";
 export default function Footer() {
   return (
     <footer
-      className="relative py-10 px-12 border-t"
+      className="relative py-6 sm:py-8 md:py-10 px-4 sm:px-6 md:px-12 border-t"
       style={{
         backgroundColor: "#1A1A18",
         borderTopColor: "rgba(255, 255, 255, 0.06)",
@@ -20,11 +20,11 @@ export default function Footer() {
       />
 
       <div className="container mx-auto max-w-6xl">
-        <div className="flex justify-between items-center flex-wrap gap-5 pt-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center flex-wrap gap-4 sm:gap-5 pt-6 sm:pt-8">
           {/* Left: Logo + Copyright */}
           <div className="flex items-center gap-3">
             <div
-              className="w-3.5 h-3.5 rounded-full border-1.5"
+              className="w-3.5 h-3.5 rounded-full border-1.5 flex-shrink-0"
               style={{ borderColor: "#8AB87A" }}
             />
             <p
@@ -35,8 +35,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center: Nav Links */}
-          <div className="flex gap-6">
+          {/* Center: Nav Links - Responsive */}
+          <div className="flex flex-wrap gap-3 sm:gap-6">
             {content.footer.links.map((link) => (
               <Link
                 key={link.label}
@@ -53,10 +53,10 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Right: Tag + Social */}
-          <div className="flex items-center gap-4">
+          {/* Right: Tag + Social - Responsive */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <div
-              className="px-3 py-1.5 rounded-full text-xs font-semibold"
+              className="px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap"
               style={{
                 backgroundColor: "#E8EDE4",
                 color: "#3D6B2E",

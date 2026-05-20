@@ -4,7 +4,7 @@ import { content, EXTERNAL_LINK } from "@/content";
 export default function CTA() {
   return (
     <section
-      className="relative py-24 px-12 text-center overflow-hidden"
+      className="relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 text-center overflow-hidden"
       style={{ backgroundColor: "#F0EFEB" }}
       id="contact"
     >
@@ -19,7 +19,7 @@ export default function CTA() {
       <div className="relative z-10 max-w-2xl mx-auto" data-parallax="-0.15">
         {/* Tag */}
         <div
-          className="inline-flex items-center gap-2 px-3 py-2 rounded-full mb-8 animate-fadeIn"
+          className="inline-flex items-center gap-2 px-3 py-2 rounded-full mb-6 sm:mb-8 animate-fadeIn"
           style={{
             backgroundColor: "#E8EDE4",
             color: "#3D6B2E",
@@ -30,28 +30,28 @@ export default function CTA() {
         </div>
 
         {/* Title */}
-        <h2 className="hero-title mb-6 animate-slideUp">{content.cta.title}</h2>
+        <h2 className="hero-title mb-4 sm:mb-6 animate-slideUp">{content.cta.title}</h2>
 
         {/* Description */}
         <p
-          className="font-inter text-sm leading-relaxed mb-12 animate-slideUp"
+          className="font-inter text-sm leading-relaxed mb-8 sm:mb-12 animate-slideUp"
           style={{ color: "#6B6A66", animationDelay: "0.1s" }}
         >
           {content.cta.description}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex gap-3.5 justify-center animate-slideUp" style={{ animationDelay: "0.2s" }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-3.5 justify-center animate-slideUp" style={{ animationDelay: "0.2s" }}>
           <a
             href={EXTERNAL_LINK}
-            className="px-8 py-3.5 rounded-lg font-syne font-bold text-sm text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
+            className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-syne font-bold text-sm text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
             style={{ backgroundColor: "#1A1A18" }}
           >
             {content.cta.cta1} →
           </a>
           <Link
             href="/projects"
-            className="px-8 py-3.5 rounded-lg font-inter font-semibold text-sm transition-all duration-300 border-2 hover:scale-105"
+            className="px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-inter font-semibold text-sm transition-all duration-300 border-2 hover:scale-105"
             style={{
               borderColor: "rgba(26, 26, 24, 0.2)",
               color: "#1A1A18",

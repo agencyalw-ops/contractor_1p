@@ -50,24 +50,24 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="py-12 px-12 border-t"
+      className="py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-12 border-t"
       style={{
         backgroundColor: "#1A1A18",
         borderTopColor: "rgba(255, 255, 255, 0.06)",
       }}
     >
-      <div className="container mx-auto max-w-6xl grid grid-cols-4 gap-6">
+      <div className="container mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
         {content.stats.items.map((stat, idx) => (
           <div
             key={idx}
-            className="text-center pt-5 border-t"
+            className="text-center pt-3 sm:pt-5 border-t"
             style={{
               borderTopColor: "rgba(255, 255, 255, 0.08)",
             }}
             data-parallax="0.06"
           >
             <div
-              className="font-syne font-extrabold text-5xl mb-1.5"
+              className="font-syne font-extrabold text-3xl sm:text-4xl md:text-5xl mb-1 sm:mb-1.5"
               style={{ color: "#F0EFEB" }}
             >
               {counts[idx]}{idx === 1 ? "%" : "+"}

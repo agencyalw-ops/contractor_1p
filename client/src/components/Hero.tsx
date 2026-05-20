@@ -17,9 +17,9 @@ export default function Hero() {
         }}
       />
 
-      {/* Mossy Rock - Bottom Left */}
+      {/* Mossy Rock - Bottom Left - Hidden on mobile */}
       <div
-        className="absolute bottom-0 left-0 w-80 h-80 rounded-2xl overflow-hidden opacity-35 -ml-20 -mb-20"
+        className="absolute bottom-0 left-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-2xl overflow-hidden opacity-35 -ml-10 sm:-ml-20 -mb-10 sm:-mb-20 hidden sm:block"
         data-parallax="0.22"
       >
         <img
@@ -29,9 +29,9 @@ export default function Hero() {
         />
       </div>
 
-      {/* Mossy Rock - Top Right */}
+      {/* Mossy Rock - Top Right - Hidden on mobile */}
       <div
-        className="absolute top-0 right-0 w-60 h-60 rounded-2xl overflow-hidden opacity-30 -mr-5 -mt-8"
+        className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-2xl overflow-hidden opacity-30 -mr-5 -mt-8 hidden sm:block"
         data-parallax="0.18"
       >
         <img
@@ -41,7 +41,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Watermark Text */}
+      {/* Watermark Text - Responsive sizing */}
       <div
         className="absolute top-1/4 left-0 whitespace-nowrap pointer-events-none select-none"
         data-parallax="0.45"
@@ -50,7 +50,7 @@ export default function Hero() {
       </div>
 
       {/* Content Grid */}
-      <div className="relative z-10 container mx-auto px-12 py-20 grid grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left Column */}
         <div>
           {/* Tag */}
@@ -77,17 +77,17 @@ export default function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex gap-3 mb-8 animate-slideUp" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row gap-3 mb-8 animate-slideUp" style={{ animationDelay: "0.2s" }}>
             <a
               href={EXTERNAL_LINK}
-              className="px-6 py-3 rounded-lg font-semibold text-sm text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="px-6 py-3 rounded-lg font-semibold text-sm text-white transition-all duration-300 hover:shadow-lg hover:scale-105 text-center"
               style={{ backgroundColor: "#1A1A18" }}
             >
               {content.hero.cta1}
             </a>
             <Link
               href="/services"
-              className="px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 border-2 hover:scale-105"
+              className="px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 border-2 hover:scale-105 text-center"
               style={{
                 borderColor: "rgba(26, 26, 24, 0.2)",
                 color: "#1A1A18",
@@ -98,7 +98,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex gap-8 animate-slideUp" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 animate-slideUp" style={{ animationDelay: "0.3s" }}>
             <div>
               <p className="font-inter font-medium text-xs" style={{ color: "#6B6A66" }}>
                 {content.hero.stat1}
@@ -112,13 +112,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column - 3D Ring */}
+        {/* Right Column - 3D Ring - Hidden on mobile */}
         <div
-          className="flex justify-center items-center"
+          className="hidden md:flex justify-center items-center"
           data-parallax="0.25"
         >
           <div
-            className="w-56 h-56 rounded-full animate-rotate3d"
+            className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full animate-rotate3d"
             style={{
               background: `linear-gradient(135deg, #8AB87A 0%, #3D6B2E 100%)`,
               boxShadow:

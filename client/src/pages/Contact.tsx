@@ -9,13 +9,13 @@ export default function Contact() {
       <main className="flex-1">
         {/* Hero Section */}
         <section
-          className="py-24 px-12"
+          className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12"
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="hero-title mb-6 animate-slideUp">GET IN TOUCH</h1>
+            <h1 className="hero-title mb-4 sm:mb-6 animate-slideUp">GET IN TOUCH</h1>
             <p
-              className="font-inter text-lg leading-relaxed animate-slideUp"
+              className="font-inter text-base sm:text-lg leading-relaxed animate-slideUp"
               style={{ color: "#6B6A66", animationDelay: "0.1s" }}
             >
               Have a project in mind? We'd love to hear from you. Contact us today to discuss your construction needs.
@@ -25,13 +25,13 @@ export default function Contact() {
 
         {/* Contact Section */}
         <section
-          className="py-20 px-12"
+          className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12"
           style={{ backgroundColor: "#FFFFFF" }}
         >
-          <div className="container mx-auto max-w-6xl grid grid-cols-2 gap-12">
+          <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Form */}
             <div className="animate-slideLeft">
-              <h2 className="sub-head mb-8">SEND US A MESSAGE</h2>
+              <h2 className="sub-head mb-6 md:mb-8">SEND US A MESSAGE</h2>
               <form className="space-y-6">
                 <div>
                   <label
@@ -114,9 +114,9 @@ export default function Contact() {
 
             {/* Contact Info */}
             <div className="animate-slideUp">
-              <h2 className="sub-head mb-8">CONTACT INFO</h2>
-              <div className="space-y-8">
-                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
+              <h2 className="sub-head mb-6 md:mb-8">CONTACT INFO</h2>
+              <div className="space-y-6 md:space-y-8">
+                <div className="p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
                     className="font-inter font-semibold text-sm mb-2"
                     style={{ color: "#1A1A18" }}
@@ -131,7 +131,7 @@ export default function Contact() {
                     Indonesia
                   </p>
                 </div>
-                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
+                <div className="p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
                     className="font-inter font-semibold text-sm mb-2"
                     style={{ color: "#1A1A18" }}
@@ -146,7 +146,7 @@ export default function Contact() {
                     +62 (0) XXX-XXXX-XXXX
                   </a>
                 </div>
-                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
+                <div className="p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
                     className="font-inter font-semibold text-sm mb-2"
                     style={{ color: "#1A1A18" }}
@@ -161,9 +161,9 @@ export default function Contact() {
                     info@kontraktor.id
                   </a>
                 </div>
-                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
+                <div className="p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
-                    className="font-inter font-semibold text-sm mb-4"
+                    className="font-inter font-semibold text-sm mb-3 sm:mb-4"
                     style={{ color: "#1A1A18" }}
                   >
                     Business Hours

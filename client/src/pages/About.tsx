@@ -9,13 +9,13 @@ export default function AboutPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section
-          className="py-24 px-12"
+          className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12"
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="hero-title mb-6 animate-slideUp">ABOUT US</h1>
+            <h1 className="hero-title mb-4 sm:mb-6 animate-slideUp">ABOUT US</h1>
             <p
-              className="font-inter text-lg leading-relaxed animate-slideUp"
+              className="font-inter text-base sm:text-lg leading-relaxed animate-slideUp"
               style={{ color: "#6B6A66", animationDelay: "0.1s" }}
             >
               Kontraktor Bangunan is a leading construction company based in Wonosobo, Indonesia, dedicated to delivering premium building solutions with a focus on sustainability and innovation.
@@ -25,13 +25,13 @@ export default function AboutPage() {
 
         {/* Company Story */}
         <section
-          className="py-20 px-12"
+          className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12"
           style={{ backgroundColor: "#FFFFFF" }}
         >
           <div className="container mx-auto max-w-4xl">
-            <div className="grid grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="animate-slideLeft">
-                <h2 className="sub-head mb-6">OUR STORY</h2>
+                <h2 className="sub-head mb-4 md:mb-6">OUR STORY</h2>
                 <p
                   className="font-inter text-sm leading-relaxed mb-4"
                   style={{ color: "#6B6A66" }}
@@ -45,7 +45,7 @@ export default function AboutPage() {
                   With over 15 years of experience, our team has successfully completed 50+ projects ranging from residential to commercial developments, all while maintaining our core values of excellence and environmental responsibility.
                 </p>
               </div>
-              <div className="rounded-2xl overflow-hidden h-80 animate-slideUp">
+              <div className="rounded-2xl overflow-hidden h-48 sm:h-64 md:h-80 animate-slideUp">
                 <img
                   src={content.images.hero}
                   alt="Company"
@@ -58,12 +58,12 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section
-          className="py-20 px-12"
+          className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12"
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-6xl">
-            <h2 className="sub-head text-center mb-16 animate-slideUp">OUR VALUES</h2>
-            <div className="grid grid-cols-3 gap-8">
+            <h2 className="sub-head text-center mb-8 sm:mb-12 md:mb-16 animate-slideUp">OUR VALUES</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
                 {
                   title: "Excellence",
@@ -80,7 +80,7 @@ export default function AboutPage() {
               ].map((value, idx) => (
                 <div
                   key={idx}
-                  className="p-8 rounded-2xl text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slideUp"
+                  className="p-6 md:p-8 rounded-2xl text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slideUp"
                   style={{
                     backgroundColor: "#FFFFFF",
                     animationDelay: `${idx * 0.1}s`,
@@ -106,12 +106,12 @@ export default function AboutPage() {
 
         {/* Team Section */}
         <section
-          className="py-20 px-12"
+          className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12"
           style={{ backgroundColor: "#FFFFFF" }}
         >
           <div className="container mx-auto max-w-6xl">
-            <h2 className="sub-head text-center mb-16 animate-slideUp">OUR TEAM</h2>
-            <div className="grid grid-cols-4 gap-8">
+            <h2 className="sub-head text-center mb-8 sm:mb-12 md:mb-16 animate-slideUp">OUR TEAM</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
               {[
                 { name: "Budi Santoso", role: "Chief Executive Officer" },
                 { name: "Siti Nurhaliza", role: "Head of Design" },
@@ -120,14 +120,14 @@ export default function AboutPage() {
               ].map((member, idx) => (
                 <div
                   key={idx}
-                  className="text-center p-6 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-slideUp"
+                  className="text-center p-4 md:p-6 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-slideUp"
                   style={{
                     backgroundColor: "#F0EFEB",
                     animationDelay: `${idx * 0.1}s`,
                   }}
                 >
                   <div
-                    className="w-20 h-20 rounded-full mx-auto mb-4 transition-transform duration-300 hover:scale-110"
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 md:mb-4 transition-transform duration-300 hover:scale-110"
                     style={{
                       backgroundColor: "#8AB87A",
                     }}
@@ -152,14 +152,14 @@ export default function AboutPage() {
 
         {/* Stats Section */}
         <section
-          className="py-16 px-12"
+          className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12"
           style={{ backgroundColor: "#1A1A18" }}
         >
-          <div className="container mx-auto max-w-6xl grid grid-cols-4 gap-8">
+          <div className="container mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8">
             {content.stats.items.map((stat, idx) => (
               <div key={idx} className="text-center animate-slideUp" style={{ animationDelay: `${idx * 0.1}s` }}>
                 <div
-                  className="font-syne font-extrabold text-4xl mb-2"
+                  className="font-syne font-extrabold text-2xl sm:text-3xl md:text-4xl mb-2"
                   style={{ color: "#F0EFEB" }}
                 >
                   {stat.value}

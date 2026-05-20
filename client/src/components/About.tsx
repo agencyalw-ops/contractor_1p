@@ -28,14 +28,14 @@ export default function About() {
 
   return (
     <section
-      className="relative py-20 px-12 overflow-hidden"
+      className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 overflow-hidden"
       style={{ backgroundColor: "#F0EFEB" }}
       id="about"
     >
-      <div className="container mx-auto max-w-6xl grid grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left Column - Features */}
         <div data-parallax="-0.1">
-          <h2 className="sub-head mb-12">{content.about.title}</h2>
+          <h2 className="sub-head mb-8 md:mb-12">{content.about.title}</h2>
 
           <div className="space-y-5">
             {content.about.features.map((feature, idx) => (
@@ -84,8 +84,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Column - 3D Leaf */}
-        <div className="relative flex justify-center items-center" data-parallax="0.3">
+        {/* Right Column - 3D Leaf - Hidden on mobile */}
+        <div className="hidden md:flex relative justify-center items-center" data-parallax="0.3">
           {/* Background Fog */}
           <div
             className="absolute inset-0 opacity-40 blur-sm"
@@ -97,7 +97,7 @@ export default function About() {
           />
 
           {/* 3D Leaf Shape */}
-          <div className="relative w-64 h-64">
+          <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64">
             {/* Outer leaf layers */}
             <div
               className="absolute inset-0 rounded-full"
