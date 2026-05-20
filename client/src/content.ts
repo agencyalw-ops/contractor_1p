@@ -131,10 +131,10 @@ export const content = {
 
   // Images
   images: {
-    hero: "/manus-storage/hero_construction_009d7578.png",
-    mossyRock1: "/manus-storage/mossy_rock_1_13c50270.png",
-    mossyRock2: "/manus-storage/mossy_rock_2_ca2b967d.png",
-    natureStrip1: "/manus-storage/nature_strip_1_ca146b22.png",
-    natureStrip2: "/manus-storage/nature_strip_2_e2585604.png",
+    hero: "https://i.pinimg.com/736x/11/49/94/114994074f627b4543e48fbdf62d2af7.jpg",
+    mossyRock1: "https://i.pinimg.com/736x/11/49/94/114994074f627b4543e48fbdf62d2af7.jpg",
+    mossyRock2: "https://i.pinimg.com/736x/4a/10/6d/4a106db0b28c46ccaf7f89ce1a2215bf.jpg",
+    natureStrip1: "https://i.pinimg.com/736x/11/49/94/114994074f627b4543e48fbdf62d2af7.jpg",
+    natureStrip2: "https://i.pinimg.com/736x/4a/10/6d/4a106db0b28c46ccaf7f89ce1a2215bf.jpg",
   },
 };
