@@ -37,7 +37,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col animate-pageEnter">
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
@@ -46,10 +46,10 @@ export default function Services() {
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="hero-title mb-6">OUR SERVICES</h1>
+            <h1 className="hero-title mb-6 animate-slideUp">OUR SERVICES</h1>
             <p
-              className="font-inter text-lg leading-relaxed"
-              style={{ color: "#6B6A66" }}
+              className="font-inter text-lg leading-relaxed animate-slideUp"
+              style={{ color: "#6B6A66", animationDelay: "0.1s" }}
             >
               Comprehensive construction solutions tailored to your needs, combining expertise, innovation, and sustainability.
             </p>
@@ -66,13 +66,16 @@ export default function Services() {
               {services.map((service, idx) => (
                 <div
                   key={idx}
-                  className="p-8 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                  className="p-8 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-accent-green animate-slideUp"
                   style={{
                     backgroundColor: "#FFFFFF",
                     borderColor: "rgba(26, 26, 24, 0.06)",
+                    animationDelay: `${idx * 0.1}s`,
                   }}
                 >
-                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <div className="text-4xl mb-4 transition-transform duration-300 hover:scale-110">
+                    {service.icon}
+                  </div>
                   <h3
                     className="font-syne font-bold text-lg mb-3"
                     style={{ color: "#1A1A18" }}
@@ -97,23 +100,17 @@ export default function Services() {
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-2xl">
-            <h2 className="hero-title mb-6">Ready to Start Your Project?</h2>
+            <h2 className="hero-title mb-6 animate-slideUp">Ready to Start Your Project?</h2>
             <p
-              className="font-inter text-lg mb-8"
-              style={{ color: "#6B6A66" }}
+              className="font-inter text-lg mb-8 animate-slideUp"
+              style={{ color: "#6B6A66", animationDelay: "0.1s" }}
             >
               Contact us today to discuss your construction needs and receive a personalized consultation.
             </p>
             <a
               href={EXTERNAL_LINK}
-              className="inline-block px-8 py-3.5 rounded-lg font-syne font-bold text-white transition-all duration-200 hover:shadow-lg"
-              style={{ backgroundColor: "#1A1A18" }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "#3D6B2E";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "#1A1A18";
-              }}
+              className="inline-block px-8 py-3.5 rounded-lg font-syne font-bold text-white transition-all duration-300 hover:shadow-lg hover:scale-105 animate-slideUp"
+              style={{ backgroundColor: "#1A1A18", animationDelay: "0.2s" }}
             >
               Get in Touch →
             </a>

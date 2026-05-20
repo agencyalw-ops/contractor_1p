@@ -34,14 +34,14 @@ export default function Process() {
         </div>
 
         {/* Section Title */}
-        <h2 className="sub-head mb-12">{content.process.title}</h2>
+        <h2 className="sub-head mb-12 animate-slideUp">{content.process.title}</h2>
 
         {/* Process Cards Grid */}
         <div className="grid grid-cols-3 gap-4">
           {content.process.cards.map((card, idx) => (
             <div
               key={idx}
-              className={`relative rounded-2xl p-6 min-h-56 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 ${
+              className={`relative rounded-2xl p-6 min-h-56 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 animate-slideUp ${
                 idx === 2
                   ? "bg-black text-white"
                   : "bg-white border"
@@ -53,6 +53,7 @@ export default function Process() {
                   idx === 2
                     ? "0 4px 24px rgba(0, 0, 0, 0.04)"
                     : "0 4px 24px rgba(0, 0, 0, 0.04)",
+                animationDelay: `${idx * 0.1}s`,
               }}
               data-parallax="0.08"
             >

@@ -1,7 +1,7 @@
+import { Link } from "wouter";
 import { content, EXTERNAL_LINK } from "@/content";
 
 export default function Hero() {
-
   return (
     <section
       className="relative min-h-screen bg-white overflow-hidden flex items-center"
@@ -55,7 +55,7 @@ export default function Hero() {
         <div>
           {/* Tag */}
           <div
-            className="inline-flex items-center gap-2 px-3 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-3 py-2 rounded-full mb-6 animate-fadeIn"
             data-parallax="-0.05"
             style={{
               backgroundColor: "#E8EDE4",
@@ -72,44 +72,33 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="body-text mb-8">{content.hero.description}</p>
+          <p className="body-text mb-8 animate-slideUp" style={{ animationDelay: "0.1s" }}>
+            {content.hero.description}
+          </p>
 
           {/* CTA Buttons */}
-          <div className="flex gap-3 mb-8">
+          <div className="flex gap-3 mb-8 animate-slideUp" style={{ animationDelay: "0.2s" }}>
             <a
               href={EXTERNAL_LINK}
-              className="px-6 py-3 rounded-lg font-semibold text-sm text-white transition-all duration-200 hover:shadow-lg"
+              className="px-6 py-3 rounded-lg font-semibold text-sm text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
               style={{ backgroundColor: "#1A1A18" }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "#3D6B2E";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "#1A1A18";
-              }}
             >
               {content.hero.cta1}
             </a>
-            <a
-              href="#process"
-              className="px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 border-2"
+            <Link
+              href="/services"
+              className="px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 border-2 hover:scale-105"
               style={{
                 borderColor: "rgba(26, 26, 24, 0.2)",
                 color: "#1A1A18",
               }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.borderColor = "#3D6B2E";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.borderColor =
-                  "rgba(26, 26, 24, 0.2)";
-              }}
             >
               {content.hero.cta2} ↓
-            </a>
+            </Link>
           </div>
 
           {/* Stats */}
-          <div className="flex gap-8">
+          <div className="flex gap-8 animate-slideUp" style={{ animationDelay: "0.3s" }}>
             <div>
               <p className="font-inter font-medium text-xs" style={{ color: "#6B6A66" }}>
                 {content.hero.stat1}

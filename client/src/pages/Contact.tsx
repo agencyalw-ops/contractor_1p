@@ -4,7 +4,7 @@ import { EXTERNAL_LINK } from "@/content";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col animate-pageEnter">
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
@@ -13,10 +13,10 @@ export default function Contact() {
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="hero-title mb-6">GET IN TOUCH</h1>
+            <h1 className="hero-title mb-6 animate-slideUp">GET IN TOUCH</h1>
             <p
-              className="font-inter text-lg leading-relaxed"
-              style={{ color: "#6B6A66" }}
+              className="font-inter text-lg leading-relaxed animate-slideUp"
+              style={{ color: "#6B6A66", animationDelay: "0.1s" }}
             >
               Have a project in mind? We'd love to hear from you. Contact us today to discuss your construction needs.
             </p>
@@ -30,7 +30,7 @@ export default function Contact() {
         >
           <div className="container mx-auto max-w-6xl grid grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
+            <div className="animate-slideLeft">
               <h2 className="sub-head mb-8">SEND US A MESSAGE</h2>
               <form className="space-y-6">
                 <div>
@@ -42,16 +42,10 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2"
+                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2 transition-all duration-300"
                     style={{
                       borderColor: "rgba(26, 26, 24, 0.1)",
                       backgroundColor: "#F0EFEB",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.backgroundColor = "#FFFFFF";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.backgroundColor = "#F0EFEB";
                     }}
                   />
                 </div>
@@ -64,16 +58,10 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2"
+                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2 transition-all duration-300"
                     style={{
                       borderColor: "rgba(26, 26, 24, 0.1)",
                       backgroundColor: "#F0EFEB",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.backgroundColor = "#FFFFFF";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.backgroundColor = "#F0EFEB";
                     }}
                   />
                 </div>
@@ -85,16 +73,10 @@ export default function Contact() {
                     Project Type
                   </label>
                   <select
-                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2"
+                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2 transition-all duration-300"
                     style={{
                       borderColor: "rgba(26, 26, 24, 0.1)",
                       backgroundColor: "#F0EFEB",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.backgroundColor = "#FFFFFF";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.backgroundColor = "#F0EFEB";
                     }}
                   >
                     <option>Select a project type</option>
@@ -113,29 +95,17 @@ export default function Contact() {
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2 resize-none"
+                    className="w-full px-4 py-3 rounded-lg border font-inter text-sm focus:outline-none focus:ring-2 resize-none transition-all duration-300"
                     style={{
                       borderColor: "rgba(26, 26, 24, 0.1)",
                       backgroundColor: "#F0EFEB",
-                    }}
-                    onFocus={(e) => {
-                      e.target.style.backgroundColor = "#FFFFFF";
-                    }}
-                    onBlur={(e) => {
-                      e.target.style.backgroundColor = "#F0EFEB";
                     }}
                   />
                 </div>
                 <a
                   href={EXTERNAL_LINK}
-                  className="block w-full py-3 rounded-lg font-syne font-bold text-center text-white transition-all duration-200 hover:shadow-lg"
+                  className="block w-full py-3 rounded-lg font-syne font-bold text-center text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
                   style={{ backgroundColor: "#1A1A18" }}
-                  onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor = "#3D6B2E";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor = "#1A1A18";
-                  }}
                 >
                   Send Message →
                 </a>
@@ -143,10 +113,10 @@ export default function Contact() {
             </div>
 
             {/* Contact Info */}
-            <div>
+            <div className="animate-slideUp">
               <h2 className="sub-head mb-8">CONTACT INFO</h2>
               <div className="space-y-8">
-                <div>
+                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
                     className="font-inter font-semibold text-sm mb-2"
                     style={{ color: "#1A1A18" }}
@@ -161,7 +131,7 @@ export default function Contact() {
                     Indonesia
                   </p>
                 </div>
-                <div>
+                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
                     className="font-inter font-semibold text-sm mb-2"
                     style={{ color: "#1A1A18" }}
@@ -170,13 +140,13 @@ export default function Contact() {
                   </p>
                   <a
                     href="tel:+62"
-                    className="font-inter text-sm"
+                    className="font-inter text-sm transition-colors duration-300 hover:text-accent-green"
                     style={{ color: "#8AB87A" }}
                   >
                     +62 (0) XXX-XXXX-XXXX
                   </a>
                 </div>
-                <div>
+                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
                     className="font-inter font-semibold text-sm mb-2"
                     style={{ color: "#1A1A18" }}
@@ -185,13 +155,13 @@ export default function Contact() {
                   </p>
                   <a
                     href="mailto:info@kontraktor.id"
-                    className="font-inter text-sm"
+                    className="font-inter text-sm transition-colors duration-300 hover:text-accent-green"
                     style={{ color: "#8AB87A" }}
                   >
                     info@kontraktor.id
                   </a>
                 </div>
-                <div>
+                <div className="p-6 rounded-lg transition-all duration-300 hover:bg-gray-50" style={{ backgroundColor: "#F0EFEB" }}>
                   <p
                     className="font-inter font-semibold text-sm mb-4"
                     style={{ color: "#1A1A18" }}

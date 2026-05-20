@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { content } from "@/content";
+import { content, EXTERNAL_LINK } from "@/content";
 
 const projects = [
   {
@@ -43,7 +43,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col animate-pageEnter">
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
@@ -52,10 +52,10 @@ export default function Projects() {
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="hero-title mb-6">OUR PROJECTS</h1>
+            <h1 className="hero-title mb-6 animate-slideUp">OUR PROJECTS</h1>
             <p
-              className="font-inter text-lg leading-relaxed"
-              style={{ color: "#6B6A66" }}
+              className="font-inter text-lg leading-relaxed animate-slideUp"
+              style={{ color: "#6B6A66", animationDelay: "0.1s" }}
             >
               Explore our portfolio of completed projects showcasing our expertise in sustainable construction and innovative design.
             </p>
@@ -72,9 +72,10 @@ export default function Projects() {
               {projects.map((project, idx) => (
                 <div
                   key={idx}
-                  className="group overflow-hidden rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                  className="group overflow-hidden rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-accent-green animate-slideUp"
                   style={{
                     borderColor: "rgba(26, 26, 24, 0.06)",
+                    animationDelay: `${idx * 0.1}s`,
                   }}
                 >
                   {/* Image */}
@@ -82,7 +83,7 @@ export default function Projects() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
 
@@ -119,23 +120,17 @@ export default function Projects() {
           style={{ backgroundColor: "#F0EFEB" }}
         >
           <div className="container mx-auto max-w-2xl">
-            <h2 className="hero-title mb-6">Have a Project in Mind?</h2>
+            <h2 className="hero-title mb-6 animate-slideUp">Have a Project in Mind?</h2>
             <p
-              className="font-inter text-lg mb-8"
-              style={{ color: "#6B6A66" }}
+              className="font-inter text-lg mb-8 animate-slideUp"
+              style={{ color: "#6B6A66", animationDelay: "0.1s" }}
             >
               Let us bring your vision to life with our expertise and commitment to excellence.
             </p>
             <a
-              href="https://alwgen.com"
-              className="inline-block px-8 py-3.5 rounded-lg font-syne font-bold text-white transition-all duration-200 hover:shadow-lg"
-              style={{ backgroundColor: "#1A1A18" }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "#3D6B2E";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "#1A1A18";
-              }}
+              href={EXTERNAL_LINK}
+              className="inline-block px-8 py-3.5 rounded-lg font-syne font-bold text-white transition-all duration-300 hover:shadow-lg hover:scale-105 animate-slideUp"
+              style={{ backgroundColor: "#1A1A18", animationDelay: "0.2s" }}
             >
               Start Your Project →
             </a>

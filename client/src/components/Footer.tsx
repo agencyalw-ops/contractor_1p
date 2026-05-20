@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { content } from "@/content";
 
 export default function Footer() {
@@ -37,21 +38,18 @@ export default function Footer() {
           {/* Center: Nav Links */}
           <div className="flex gap-6">
             {content.footer.links.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
-                className="font-inter text-xs transition-colors duration-200"
+                className="font-inter text-xs transition-all duration-200 hover:text-white relative group"
                 style={{ color: "rgba(255, 255, 255, 0.5)" }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.color = "white";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.color =
-                    "rgba(255, 255, 255, 0.5)";
-                }}
               >
                 {link.label}
-              </a>
+                <span
+                  className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                  style={{ backgroundColor: "#8AB87A" }}
+                />
+              </Link>
             ))}
           </div>
 
@@ -70,15 +68,8 @@ export default function Footer() {
               {/* Instagram Icon */}
               <a
                 href="https://instagram.com"
-                className="transition-colors duration-200"
+                className="transition-all duration-200 hover:text-white hover:scale-110"
                 style={{ color: "rgba(255, 255, 255, 0.5)" }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.color = "white";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.color =
-                    "rgba(255, 255, 255, 0.5)";
-                }}
               >
                 <svg
                   width="18"
@@ -96,15 +87,8 @@ export default function Footer() {
               {/* Behance Icon */}
               <a
                 href="https://behance.net"
-                className="transition-colors duration-200"
+                className="transition-all duration-200 hover:text-white hover:scale-110"
                 style={{ color: "rgba(255, 255, 255, 0.5)" }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.color = "white";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.color =
-                    "rgba(255, 255, 255, 0.5)";
-                }}
               >
                 <svg
                   width="18"

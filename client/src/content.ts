@@ -11,10 +11,10 @@ export const content = {
   nav: {
     logo: "Kontraktor Bangunan",
     links: [
-      { label: "Solutions", href: "#solutions" },
-      { label: "Process", href: "#process" },
-      { label: "About", href: "#about" },
-      { label: "Contact", href: "#contact" },
+      { label: "Services", href: "/services" },
+      { label: "Projects", href: "/projects" },
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
     ],
     tagline: "Premium Construction Solutions",
     cta: "Get Started",
@@ -30,6 +30,7 @@ export const content = {
     cta2: "View Process",
     stat1: "50+ Projects",
     stat2: "99% Satisfaction",
+    sectionId: "hero",
   },
 
   // Process Section
@@ -38,6 +39,7 @@ export const content = {
     behance: "www.behance.net/kontraktor",
     tagline: "Premium Construction Solutions",
     title: "OUR PROCESS",
+    sectionId: "process",
     cards: [
       {
         step: "01",
@@ -68,6 +70,7 @@ export const content = {
   // About/Features Section
   about: {
     title: "WHY KONTRAKTOR BANGUNAN",
+    sectionId: "about",
     features: [
       {
         title: "Sustainable Materials",
@@ -111,6 +114,7 @@ export const content = {
     description: "Transform your vision into reality with our expert construction team",
     cta1: "Start a Project",
     cta2: "View Portfolio",
+    sectionId: "contact",
   },
 
   // Footer
@@ -119,9 +123,9 @@ export const content = {
     tagline: "Premium Construction Solutions",
     links: [
       { label: "Home", href: "/" },
-      { label: "Services", href: "#services" },
-      { label: "About", href: "#about" },
-      { label: "Contact", href: "#contact" },
+      { label: "Services", href: "/services" },
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 
